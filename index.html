@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainstone Defense | The Agility of Integrated Tactical Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mainbg: '#080d19', /* Logonun arka planındaki derin lacivert/siyah */
+                        gold: '#c69b55',   /* Logodaki vurgu rengi */
+                        goldhover: '#b38b4d',
+                        graytext: '#d1d5db'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-mainbg text-white selection:bg-gold selection:text-white flex flex-col min-h-screen">
+    
+    <nav class="container mx-auto px-6 py-8 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-widest uppercase flex items-center gap-3">
+            MAINSTONE<span class="text-gold">.</span>
+        </div>
+        <a href="mailto:ali@mainstone.com.tr" class="text-sm font-semibold border border-gold text-gold px-5 py-2.5 rounded hover:bg-gold hover:text-mainbg transition-colors duration-300">
+            Partnerimiz Olun
+        </a>
+    </nav>
+
+    <header class="container mx-auto px-6 py-24 md:py-32 text-center flex-grow flex flex-col justify-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
+            The <span class="text-gold">agile</span> orchestration layer <br class="hidden md:block">
+            for integrated tactical security.
+        </h1>
+        <p class="text-xl md:text-2xl text-graytext mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+            Bütünleşik taktik güvenlik ekosisteminde siber ve fiziksel katmanların kesişiminde geleceği inşa ediyoruz. 
+        </p>
+        <div>
+            <a href="mailto:ali@mainstone.com.tr" class="inline-block bg-gold text-mainbg px-10 py-4 rounded font-bold text-lg hover:bg-goldhover transition-all duration-300 shadow-[0_0_20px_rgba(198,155,85,0.4)] hover:shadow-[0_0_30px_rgba(198,155,85,0.6)] hover:-translate-y-1">
+                Request a Demo
+            </a>
+        </div>
+    </header>
+
+    <section class="border-y border-gray-800 bg-[#0b1325]">
+        <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 text-center">
+            <div class="opacity-60">
+                <p class="text-gray-400 text-sm md:text-base mb-2 uppercase tracking-widest font-semibold">Sektör Standardı</p>
+                <p class="text-4xl md:text-5xl font-bold text-gray-500 line-through">21 Gün</p>
+            </div>
+            <div class="hidden md:block w-px h-24 bg-gray-800"></div>
+            <div>
+                <p class="text-gold text-sm md:text-base mb-2 uppercase tracking-widest font-bold">Mainstone Kurulumu</p>
+                <p class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-[0_0_15px_rgba(198,155,85,0.3)]">Saniyeler İçinde</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
+                <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Donanım Bağımsız Entegrasyon</h3>
+                <p class="text-graytext text-sm leading-relaxed">Farklı üreticilerin radar, sensör ve efektörlerini tekil iz (unified track) üzerinde sıfır veri kaybı ile sentezleyen gelişmiş füzyon mimarisi.</p>
+            </div>
+            <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
+                <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Dinamik C2 Mimarisi</h3>
+                <p class="text-graytext text-sm leading-relaxed">Sıfır tekil bağımlılık. Merkez çökse bile saniyeler içinde ağdaki başka bir düğümden ayağa kalkan, tavizsiz operasyonel süreklilik.</p>
+            </div>
+            <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
+                <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Tak-Çalıştır Optimizasyon</h3>
+                <p class="text-graytext text-sm leading-relaxed">Sahaya mühendis gönderme maliyetini ve destek yükünü sıfırlayan, tek dosya ile uzaktan anında aktivasyon ve güncelleme kolaylığı.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-gray-800 text-center py-8 bg-[#060a13] mt-auto">
+        <p class="text-gray-600 text-sm tracking-wide">© 2026 Mainstone Defense Consultancy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
