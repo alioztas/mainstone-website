@@ -30,74 +30,135 @@
 
     <nav class="relative z-10 container mx-auto px-6 py-8 flex justify-between items-center">
         <div class="text-3xl font-bold tracking-widest uppercase">MAINSTONE<span class="text-gold">.</span></div>
-        <div class="flex gap-6">
-            <button onclick="setLang('tr')" class="text-gold font-bold border-b-2 border-gold pb-1">TR</button>
-            <button onclick="setLang('en')" class="text-gray-400 hover:text-white transition">EN</button>
+        <div class="flex gap-6 items-center">
+            <button id="btn-tr" onclick="setLang('tr')" class="text-gold font-bold border-b-2 border-gold pb-1">TR</button>
+            <button id="btn-en" onclick="setLang('en')" class="text-gray-400 hover:text-white transition">EN</button>
+            <a id="btn-contact-nav" href="mailto:ali@mainstone.com.tr" class="ml-4 text-sm font-semibold border border-gold text-gold px-5 py-2.5 rounded hover:bg-gold hover:text-mainbg transition-colors duration-300">
+                Bize Ulaşın
+            </a>
         </div>
-        <a href="mailto:ali@mainstone.com.tr" class="text-sm font-semibold border border-gold text-gold px-5 py-2.5 rounded hover:bg-gold hover:text-mainbg transition-colors duration-300">
-            Bize Ulaşın
-        </a>
     </nav>
 
-    <header class="container mx-auto px-6 py-20 text-center">
-        <div id="content-tr">
+    <div id="content-tr">
+        <header class="relative z-10 container mx-auto px-6 py-20 text-center">
             <h1 class="text-5xl md:text-6xl font-bold mb-6">Bütünleşik taktiksel güvenlik için çevik orkestrasyon katmanı.</h1>
             <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Karmaşık sensör verilerini, kesintisiz operasyonlar için uygulanabilir istihbarata dönüştürüyoruz.</p>
             <a href="mailto:ali@mainstone.com.tr" class="inline-block bg-[#c69b55] hover:bg-[#b38b4d] text-[#080d19] px-8 py-3 rounded font-bold transition">Bize Ulaşın</a>
-        </div>
+        </header>
 
-        <div id="content-en" style="display:none;">
+        <section class="relative z-10 border-y border-gray-800 bg-[#0b1325]">
+            <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 text-center">
+                <div class="opacity-60">
+                    <p class="text-gray-400 text-sm md:text-base mb-2 uppercase tracking-widest font-semibold">Sektör Standardı</p>
+                    <p class="text-4xl md:text-5xl font-bold text-gray-500 line-through">Aylar</p>
+                </div>
+                <div class="hidden md:block w-px h-24 bg-gray-800"></div>
+                <div>
+                    <p class="text-gold text-sm md:text-base mb-2 uppercase tracking-widest font-bold">Mainstone Kurulumu</p>
+                    <p class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-[0_0_15px_rgba(198,155,85,0.3)]">Saniyeler İçinde</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative z-10 container mx-auto px-6 py-24">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
+                    <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Donanım Bağımsız Entegrasyon</h3>
+                    <p class="text-graytext text-sm leading-relaxed">Farklı üreticilerin radar, sensör ve efektörlerini tekil iz (unified track) üzerinde sıfır veri kaybı ile sentezleyen gelişmiş füzyon mimarisi.</p>
+                </div>
+                <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
+                    <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Dinamik C2 Mimarisi</h3>
+                    <p class="text-graytext text-sm leading-relaxed">Sıfır tekil bağımlılık. Merkez çökse bile saniyeler içinde ağdaki başka bir düğümden ayağa kalkan, tavizsiz operasyonel süreklilik.</p>
+                </div>
+                <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
+                    <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Tak-Çalıştır Optimizasyon</h3>
+                    <p class="text-graytext text-sm leading-relaxed">Sahaya mühendis gönderme maliyetini ve destek yükünü sıfırlayan, tek dosya ile uzaktan anında aktivasyon ve güncelleme kolaylığı.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="content-en" style="display:none;">
+        <header class="relative z-10 container mx-auto px-6 py-20 text-center">
             <h1 class="text-5xl md:text-6xl font-bold mb-6">The agile orchestration layer for integrated tactical security.</h1>
             <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">We transform complex sensor data into actionable intelligence for seamless operations.</p>
             <a href="mailto:ali@mainstone.com.tr" class="inline-block bg-[#c69b55] hover:bg-[#b38b4d] text-[#080d19] px-8 py-3 rounded font-bold transition">Contact Us</a>
-        </div>
-    </header>
-    <section class="border-y border-gray-800 bg-[#0b1325]">
-        <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 text-center">
-            <div class="opacity-60">
-                <p class="text-gray-400 text-sm md:text-base mb-2 uppercase tracking-widest font-semibold">Sektör Standardı</p>
-                <p class="text-4xl md:text-5xl font-bold text-gray-500 line-through">Aylar</p>
-            </div>
-            <div class="hidden md:block w-px h-24 bg-gray-800"></div>
-            <div>
-                <p class="text-gold text-sm md:text-base mb-2 uppercase tracking-widest font-bold">Mainstone Kurulumu</p>
-                <p class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-[0_0_15px_rgba(198,155,85,0.3)]">Saniyeler İçinde</p>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <section class="container mx-auto px-6 py-24">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
-                <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <section class="relative z-10 border-y border-gray-800 bg-[#0b1325]">
+            <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 text-center">
+                <div class="opacity-60">
+                    <p class="text-gray-400 text-sm md:text-base mb-2 uppercase tracking-widest font-semibold">Industry Standard</p>
+                    <p class="text-4xl md:text-5xl font-bold text-gray-500 line-through">Months</p>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Donanım Bağımsız Entegrasyon</h3>
-                <p class="text-graytext text-sm leading-relaxed">Farklı üreticilerin radar, sensör ve efektörlerini tekil iz (unified track) üzerinde sıfır veri kaybı ile sentezleyen gelişmiş füzyon mimarisi.</p>
-            </div>
-            <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
-                <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                <div class="hidden md:block w-px h-24 bg-gray-800"></div>
+                <div>
+                    <p class="text-gold text-sm md:text-base mb-2 uppercase tracking-widest font-bold">Mainstone Setup</p>
+                    <p class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-[0_0_15px_rgba(198,155,85,0.3)]">Within Seconds</p>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Dinamik C2 Mimarisi</h3>
-                <p class="text-graytext text-sm leading-relaxed">Sıfır tekil bağımlılık. Merkez çökse bile saniyeler içinde ağdaki başka bir düğümden ayağa kalkan, tavizsiz operasyonel süreklilik.</p>
             </div>
-            <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
-                <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        </section>
+
+        <section class="relative z-10 container mx-auto px-6 py-24">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
+                    <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Hardware-Agnostic Integration</h3>
+                    <p class="text-graytext text-sm leading-relaxed">Advanced fusion architecture that synthesizes disparate radar, sensor, and effector data into a unified track with zero data loss.</p>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Tak-Çalıştır Optimizasyon</h3>
-                <p class="text-graytext text-sm leading-relaxed">Sahaya mühendis gönderme maliyetini ve destek yükünü sıfırlayan, tek dosya ile uzaktan anında aktivasyon ve güncelleme kolaylığı.</p>
+                <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
+                    <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Dynamic C2 Architecture</h3>
+                    <p class="text-graytext text-sm leading-relaxed">Zero single-point dependency. Uncompromising operational continuity that automatically recovers from any network node within seconds if the center fails.</p>
+                </div>
+                <div class="p-8 border border-gray-800 rounded-xl hover:border-gold transition-colors duration-300 bg-[#0a101f]">
+                    <div class="w-14 h-14 mb-6 flex items-center justify-center bg-gray-900 rounded-lg border border-gray-700 text-gold">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Plug-and-Play Optimization</h3>
+                    <p class="text-graytext text-sm leading-relaxed">Eliminates site-visit engineering costs and support overhead with single-file, remote instant activation and seamless updates.</p>
+                </div>
             </div>
-        </div>
-    </section>
-    <footer class="border-t border-gray-800 text-center py-8 bg-[#060a13] mt-auto">
+        </section>
+    </div>
+
+    <footer class="relative z-10 border-t border-gray-800 text-center py-8 bg-[#060a13] mt-auto">
         <p class="text-gray-600 text-sm tracking-wide">© 2026 Mainstone Defense Consultancy. All rights reserved.</p>
     </footer>
     <script>
         function setLang(lang) {
             document.getElementById('content-tr').style.display = (lang === 'tr') ? 'block' : 'none';
             document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+            const btnTR = document.getElementById('btn-tr');
+            const btnEN = document.getElementById('btn-en');
+            const btnContactNav = document.getElementById('btn-contact-nav');
+
+            if(lang === 'tr') {
+                // TR butonu aktif (Sarı ve altı çizili)
+                btnTR.className = "text-gold font-bold border-b-2 border-gold pb-1";
+                btnEN.className = "text-gray-400 hover:text-white transition";
+                btnContactNav.innerText = "Bize Ulaşın";
+                document.documentElement.lang = "tr";
+            } else {
+                // EN butonu aktif (Sarı ve altı çizili)
+                btnEN.className = "text-gold font-bold border-b-2 border-gold pb-1";
+                btnTR.className = "text-gray-400 hover:text-white transition";
+                btnContactNav.innerText = "Contact";
+                document.documentElement.lang = "en";
+            }
         }
     </script>
 </body>
