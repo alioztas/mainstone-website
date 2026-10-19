@@ -5,54 +5,449 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Unstoppable Dursun | Mainstone Interactive</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h1, h2 { color: #111; }
-        h1 { border-bottom: 2px solid #eaeaea; padding-bottom: 10px; }
-        h2 { margin-top: 30px; }
-        p, li { color: #555; }
-        ul { padding-left: 20px; }
-        .footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #eaeaea; padding-top: 20px; }
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --heading-color: #0f172a;
+            --border-color: #e2e8f0;
+            --primary-color: #2563eb;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08);
+            border: 1px solid var(--border-color);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        h1 { margin: 0; color: var(--heading-color); font-size: 1.85rem; }
+        h2 { color: var(--heading-color); margin-top: 30px; font-size: 1.3rem; border-left: 4px solid var(--primary-color); padding-left: 12px; }
+        p, li { color: #475569; font-size: 0.98rem; }
+        ul { padding-left: 24px; }
+        li { margin-bottom: 8px; }
+        select {
+            padding: 8px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: #fff;
+            color: var(--heading-color);
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+            font-weight: 500;
+        }
+        select:focus { border-color: var(--primary-color); }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .footer {
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            color: #94a3b8;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+        a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
-    <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> October 19, 2026</p>
-    <p>This Privacy Policy applies to the mobile application <strong>Unstoppable Dursun</strong> (also known as <em>Durdurulamaz Dursun</em> / <em>Stopman</em>), developed and published by <strong>Mainstone Interactive</strong>.</p>
+<div class="container">
+    <div class="header">
+        <h1>Unstoppable Dursun</h1>
+        <div>
+            <label for="langSelect" style="font-size: 0.85rem; margin-right: 6px; font-weight: 600;">Language:</label>
+            <select id="langSelect" onchange="changeLanguage(this.value)">
+                <option value="en">English (US)</option>
+                <option value="tr">Türkçe (TR)</option>
+                <option value="de">Deutsch (DE)</option>
+                <option value="es">Español (ES)</option>
+                <option value="fr">Français (FR)</option>
+                <option value="it">Italiano (IT)</option>
+                <option value="pl">Polski (PL)</option>
+                <option value="pt">Português (PT/BR)</option>
+                <option value="ru">Русский (RU)</option>
+            </select>
+        </div>
+    </div>
 
-    <h2>1. Information We Do Not Collect</h2>
-    <p>We respect your privacy. Unstoppable Dursun does not require any account creation, user registration, or login credentials. We do not collect, store, or process sensitive personal data such as your name, email address, physical address, phone number, or biometric data.</p>
+    <!-- 1. ENGLISH (DEFAULT / FALLBACK) -->
+    <div id="lang-en" class="lang-content active">
+        <h2>Privacy Policy</h2>
+        <p><strong>Effective Date:</strong> October 19, 2026</p>
+        <p>This Privacy Policy applies to the mobile and desktop application <strong>Unstoppable Dursun</strong> (also known as <em>Durdurulamaz Dursun</em> / <em>Stopman</em>), developed and published by <strong>Mainstone Interactive</strong>.</p>
 
-    <h2>2. Local Network and Multiplayer Data</h2>
-    <p>Our game includes same-device local multiplayer, online multiplayer, and Local Area Network (LAN) multiplayer functionality:</p>
-    <ul>
-        <li><strong>Local Network (LAN) & Multicast:</strong> The application uses local Wi-Fi UDP Multicast to discover other game sessions hosted on the same local subnet. These discovery packets and gameplay communication remain entirely within your private local network and are not transmitted to or stored on our external servers.</li>
-        <li><strong>Online Multiplayer:</strong> Online peer connection data is handled strictly for active session synchronization and is never used to track your personal identity.</li>
-    </ul>
+        <h2>1. Information We Do Not Collect</h2>
+        <p>We respect your privacy. Unstoppable Dursun does not require any account creation, user registration, or login credentials. We do not collect, store, or process sensitive personal data such as your name, email address, physical address, phone number, government ID, or biometric data.</p>
 
-    <h2>3. Advertising and Analytics (Third-Party Services)</h2>
-    <p>The game may integrate trusted third-party services, such as <strong>Google AdMob</strong>, to serve advertisements. These providers may collect non-personally identifiable diagnostic information and device identifiers (such as Apple IDFA or Google Advertising ID) in compliance with applicable platform privacy rules (such as Apple's App Tracking Transparency framework).</p>
+        <h2>2. Local Network and Multiplayer Data</h2>
+        <p>Our game includes same-device local multiplayer, online multiplayer, and Local Area Network (LAN) multiplayer functionality:</p>
+        <ul>
+            <li><strong>Local Network (LAN) & Multicast:</strong> The application uses local Wi-Fi UDP Multicast to discover other game sessions hosted on the same local subnet. These discovery packets and gameplay communication remain entirely within your private local network and are not transmitted to or stored on our external servers.</li>
+            <li><strong>Online Multiplayer:</strong> Online peer connection data is handled strictly for active session synchronization and is never used to track your personal identity or persistent online habits.</li>
+        </ul>
 
-    <h2>4. Children’s Privacy</h2>
-    <p>Unstoppable Dursun does not knowingly collect any personal identifiable information from children under the age of 13. If you believe that your child has provided us with personal information, please contact us immediately so we can remove it.</p>
+        <h2>3. Advertising and Analytics (Third-Party Services)</h2>
+        <p>The game may integrate trusted third-party services, such as <strong>Google AdMob</strong>, to serve advertisements. These providers may collect non-personally identifiable diagnostic information and device identifiers (such as Apple IDFA or Google Advertising ID) in strict compliance with applicable platform privacy rules (such as Apple's App Tracking Transparency framework and Google Play's Families & Advertising Policies).</p>
 
-    <h2>5. Security</h2>
-    <p>We value your trust. Since we do not collect or store personal user accounts or databases, your personal data is not exposed to external server breaches through our application.</p>
+        <h2>4. Children’s Privacy</h2>
+        <p>Unstoppable Dursun does not knowingly collect any personally identifiable information from children under the age of 13. If you believe that your child has provided us with personal information, please contact us immediately so we can remove it.</p>
 
-    <h2>6. Changes to This Privacy Policy</h2>
-    <p>We may update our Privacy Policy periodically to reflect new features or platform requirements. We advise you to review this page occasionally for any changes.</p>
+        <h2>5. Security</h2>
+        <p>We value your trust. Because we do not operate remote user account databases or collect sensitive records, your personal data is not exposed to external database breaches through our application.</p>
 
-    <h2>7. Contact Us</h2>
-    <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us:</p>
-    <ul>
-        <li><strong>Company:</strong> Mainstone Interactive</li>
-        <li><strong>Website:</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
-        <li><strong>Email:</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
-    </ul>
+        <h2>6. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy periodically to reflect new features, operational enhancements, or platform legal requirements. We advise you to review this page occasionally for any changes.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us:</p>
+        <ul>
+            <li><strong>Company:</strong> Mainstone Interactive</li>
+            <li><strong>Website:</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
+            <li><strong>Email:</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
+        </ul>
+    </div>
+
+    <!-- 2. TURKISH -->
+    <div id="lang-tr" class="lang-content">
+        <h2>Gizlilik Politikası</h2>
+        <p><strong>Yürürlük Tarihi:</strong> 19 Ekim 2026</p>
+        <p>Bu Gizlilik Politikası, <strong>Mainstone Interactive</strong> tarafından geliştirilen ve yayınlanan <strong>Durdurulamaz Dursun</strong> (uluslararası adıyla <em>Unstoppable Dursun</em> / <em>Stopman</em>) oyunu için geçerlidir.</p>
+
+        <h2>1. Toplamadığımız Bilgiler</h2>
+        <p>Kişisel gizliliğinize en üst düzeyde saygı duyuyoruz. Durdurulamaz Dursun; herhangi bir kullanıcı hesabı oluşturma, kayıt olma veya oturum açma zorunluluğu barındırmaz. Adınız, soyadınız, e-posta adresiniz, açık adresiniz, telefon numaranız veya biyometrik verileriniz gibi hassas kişisel veriler hiçbir şekilde toplanmaz, işlenmez veya saklanmaz.</p>
+
+        <h2>2. Yerel Ağ (LAN) ve Çok Oyunculu Verileri</h2>
+        <p>Oyunumuz aynı ekranda yerel çok oyunculu, çevrimiçi çok oyunculu ve Yerel Ağ (LAN) modlarını barındırır:</p>
+        <ul>
+            <li><strong>Yerel Ağ (LAN) ve Çoklu Yayın (Multicast):</strong> Uygulama, aynı yerel Wi-Fi ağına bağlı diğer cihazların açtığı oyun odalarını tespit etmek amacıyla yerel UDP Multicast protokolünü kullanır. Keşif paketleri ve maç içi veri akışı tamamen kendi özel yerel ağınız içinde gerçekleşir; harici sunucularımıza aktarılmaz veya kaydedilmez.</li>
+            <li><strong>Çevrimiçi (Online) Çok Oyunculu:</strong> Çevrimiçi eşleşme verileri yalnızca devam eden aktif maçın anlık senkronizasyonu için geçici olarak işlenir; kullanıcı kimliğini veya internet alışkanlıklarını takip etmek amacıyla kullanılmaz.</li>
+        </ul>
+
+        <h2>3. Reklam ve Analizler (Üçüncü Taraf Hizmetleri)</h2>
+        <p>Oyun, reklam sunumu amacıyla <strong>Google AdMob</strong> gibi güvenilir üçüncü taraf reklam sağlayıcılarını kullanabilir. Bu sağlayıcılar; ilgili platformların gizlilik çerçevelerine (Apple Uygulama Takip Şeffaflığı / ATT ve Google Play Reklam Politikaları) tam uyumlu olarak yalnızca anonim teşhis verilerini ve rastgele cihaz kimliklerini (IDFA veya Google Reklam Kimliği) işleyebilir.</p>
+
+        <h2>4. Çocukların Gizliliği</h2>
+        <p>Durdurulamaz Dursun, 13 yaşın altındaki çocuklardan bilerek ve isteyerek hiçbir kişisel kimlik bilgisi toplamaz. Çocuğunuzun tarafımıza herhangi bir kişisel veri ilettiğini düşünüyorsanız, lütfen derhal bizimle iletişime geçin; gerekli kayıtlar anında kaldırılacaktır.</p>
+
+        <h2>5. Veri Güvenliği</h2>
+        <p>Güveninize büyük önem veriyoruz. Uygulamamız bünyesinde uzaktan erişilen bir kullanıcı hesabı veritabanı işletmediğimiz ve hassas kayıtlar tutmadığımız için, kişisel verileriniz oyunumuz üzerinden harici sunucu sızıntılarına maruz kalmaz.</p>
+
+        <h2>6. Bu Gizlilik Politikasındaki Değişiklikler</h2>
+        <p>Gizlilik Politikamızı yeni oyun özellikleri, operasyonel gereksinimler veya mağaza kural güncellemeleri doğrultusunda periyodik olarak güncelleyebiliriz. Olası güncellemeleri takip etmek için bu sayfayı düzenli aralıklarla ziyaret etmeniz önerilir.</p>
+
+        <h2>7. İletişim</h2>
+        <p>Bu Gizlilik Politikası ile ilgili her türlü soru, geri bildirim veya öneriniz için bizimle iletişime geçebilirsiniz:</p>
+        <ul>
+            <li><strong>Geliştirici / Şirket:</strong> Mainstone Interactive</li>
+            <li><strong>Web Sitesi:</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
+            <li><strong>E-posta:</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
+        </ul>
+    </div>
+
+    <!-- 3. GERMAN -->
+    <div id="lang-de" class="lang-content">
+        <h2>Datenschutzerklärung</h2>
+        <p><strong>Gültig ab:</strong> 19. Oktober 2026</p>
+        <p>Diese Datenschutzerklärung gilt für das von <strong>Mainstone Interactive</strong> entwickelte und veröffentlichte Spiel <strong>Unstoppable Dursun</strong> (auch bekannt als <em>Durdurulamaz Dursun</em> / <em>Stopman</em>).</p>
+
+        <h2>1. Daten, die wir nicht erfassen</h2>
+        <p>Wir respektieren Ihre Privatsphäre. Unstoppable Dursun erfordert keine Registrierung, kein Benutzerkonto und keine Anmeldedaten. Wir erfassen, verarbeiten oder speichern keine personenbezogenen Daten wie Name, E-Mail-Adresse, Postanschrift, Telefonnummer oder biometrische Daten.</p>
+
+        <h2>2. Lokales Netzwerk (LAN) und Mehrspielerdaten</h2>
+        <p>Unser Spiel unterstützt Mehrspielermodi am selben Gerät, Online-Mehrspieler und Partien über das lokale Netzwerk (LAN):</p>
+        <ul>
+            <li><strong>Lokales Netzwerk (LAN) & Multicast:</strong> Die Anwendung nutzt lokales Wi-Fi-UDP-Multicast, um Lobbys im selben Subnetz zu entdecken. Diese Datenpakete verbleiben vollständig in Ihrem privaten Heimnetzwerk und werden niemals an unsere Server übertragen.</li>
+            <li><strong>Online-Mehrspieler:</strong> Peer-Verbindungsdaten dienen rein der temporären Spielsynchronisation und werden niemals zur Profilerstellung oder Identitätsverfolgung verwendet.</li>
+        </ul>
+
+        <h2>3. Drittanbieterdienste und Werbung</h2>
+        <p>Das Spiel kann vertrauenswürdige Drittanbieterdienste wie <strong>Google AdMob</strong> integrieren, um Werbung bereitzustellen. Diese Anbieter verarbeiten anonyme Diagnoseinformationen und Werbekennungen (wie Apple IDFA oder Google Advertising ID) unter strikter Einhaltung der geltenden Plattformrichtlinien (z. B. Apples App-Tracking-Transparenz).</p>
+
+        <h2>4. Schutz der Privatsphäre von Kindern</h2>
+        <p>Unstoppable Dursun erfasst wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Sollten Sie annehmen, dass ein Kind uns personenbezogene Daten übermittelt hat, kontaktieren Sie uns bitte umgehend.</p>
+
+        <h2>5. Datensicherheit</h2>
+        <p>Da wir keine externen Benutzerdatenbanken betreiben und keine sensiblen Benutzerprofile speichern, sind Ihre Daten durch unsere Anwendung keinen Server-Sicherheitsrisiken ausgesetzt.</p>
+
+        <h2>6. Änderungen dieser Datenschutzerklärung</h2>
+        <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit anpassen, um neue Spielfunktionen oder geänderte gesetzliche Richtlinien zu berücksichtigen.</p>
+
+        <h2>7. Kontakt</h2>
+        <p>Bei Fragen oder Anregungen zu dieser Datenschutzerklärung erreichen Sie uns unter:</p>
+        <ul>
+            <li><strong>Unternehmen:</strong> Mainstone Interactive</li>
+            <li><strong>Webseite:</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
+            <li><strong>E-Mail:</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
+        </ul>
+    </div>
+
+    <!-- 4. SPANISH -->
+    <div id="lang-es" class="lang-content">
+        <h2>Política de Privacidad</h2>
+        <p><strong>Fecha de entrada en vigor:</strong> 19 de octubre de 2026</p>
+        <p>Esta Política de Privacidad se aplica al juego <strong>Unstoppable Dursun</strong> (también conocido como <em>Durdurulamaz Dursun</em> / <em>Stopman</em>), desarrollado y publicado por <strong>Mainstone Interactive</strong>.</p>
+
+        <h2>1. Información que no recopilamos</h2>
+        <p>Respetamos su privacidad. Unstoppable Dursun no requiere registro de usuario, creación de cuentas ni inicio de sesión. No recopilamos, almacenamos ni procesamos información personal como su nombre, correo electrónico, dirección física, número de teléfono o datos biométricos.</p>
+
+        <h2>2. Red Local (LAN) y Datos Multijugador</h2>
+        <p>El juego ofrece opciones de multijugador local en el mismo dispositivo, multijugador en línea y juego en red local (LAN):</p>
+        <ul>
+            <li><strong>Red Local (LAN) y Multicast:</strong> La aplicación utiliza el protocolo UDP Multicast en su red Wi-Fi para descubrir salas de juego activas en la misma subred. Estos paquetes de descubrimiento permanecen estrictamente dentro de su red local privada y no se transmiten a nuestros servidores.</li>
+            <li><strong>Multijugador en Línea:</strong> Los datos de conexión se utilizan exclusivamente para sincronizar la partida en curso y nunca para rastrear su identidad personal.</li>
+        </ul>
+
+        <h2>3. Publicidad y Servicios de Terceros</h2>
+        <p>El juego puede integrar redes de publicidad de confianza como <strong>Google AdMob</strong>. Estos proveedores pueden recopilar identificadores de dispositivos anónimos (como Apple IDFA o Google Advertising ID) cumpliendo estrictamente con las normativas de la plataforma (como el marco ATT de Apple).</p>
+
+        <h2>4. Privacidad de Menores</h2>
+        <p>Unstoppable Dursun no recopila a sabiendas datos personales de menores de 13 años. Si cree que un menor nos ha proporcionado información personal, comuníquese con nosotros de inmediato para eliminarla.</p>
+
+        <h2>5. Seguridad</h2>
+        <p>Valoramos su confianza. Al no gestionar bases de datos remotas de cuentas de usuario, sus datos personales no están expuestos a brechas de seguridad externas a través de nuestra aplicación.</p>
+
+        <h2>6. Modificaciones de esta Política</h2>
+        <p>Podemos actualizar esta Política de Privacidad periódicamente para reflejar nuevas funciones o cambios en los requisitos regulatorios de las tiendas de aplicaciones.</p>
+
+        <h2>7. Contacto</h2>
+        <p>Para cualquier consulta respecto a esta política de privacidad, contáctenos:</p>
+        <ul>
+            <li><strong>Empresa:</strong> Mainstone Interactive</li>
+            <li><strong>Sitio Web:</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
+            <li><strong>Correo Electrónico:</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
+        </ul>
+    </div>
+
+    <!-- 5. FRENCH -->
+    <div id="lang-fr" class="lang-content">
+        <h2>Politique de Confidentialité</h2>
+        <p><strong>Date d'entrée en vigueur :</strong> 19 octobre 2026</p>
+        <p>Cette Politique de Confidentialité s'applique au jeu <strong>Unstoppable Dursun</strong> (également connu sous le nom de <em>Durdurulamaz Dursun</em> / <em>Stopman</em>), développé et édité par <strong>Mainstone Interactive</strong>.</p>
+
+        <h2>1. Informations que nous ne collectons pas</h2>
+        <p>Nous respectons votre vie privée. Unstoppable Dursun ne nécessite aucune création de compte ni inscription. Nous ne collectons, ne stockons et ne traitons aucune donnée personnelle sensible telle que votre nom, adresse e-mail, adresse postale, numéro de téléphone ou données biométriques.</p>
+
+        <h2>2. Réseau Local (LAN) et Données Multijoueur</h2>
+        <p>Notre jeu prend en charge le multijoueur sur un même écran, en ligne et sur réseau local (LAN) :</p>
+        <ul>
+            <li><strong>Réseau Local (LAN) & Multicast :</strong> L'application utilise le protocole UDP Multicast local via Wi-Fi pour détecter les parties hébergées sur le même sous-réseau. Ces paquets de découverte restent cantonnés à votre réseau privé et ne sont jamais transmis à nos serveurs distants.</li>
+            <li><strong>Multijoueur en Ligne :</strong> Les données de connexion peer-to-peer sont strictement dédiées à la synchronisation de la session de jeu en cours et ne servent jamais à pister vos habitudes personnelles.</li>
+        </ul>
+
+        <h2>3. Publicité et Services Tiers</h2>
+        <p>Le jeu peut intégrer des services tiers de confiance, tels que <strong>Google AdMob</strong>, pour diffuser des annonces. Ces prestataires peuvent traiter des identifiants d'appareil anonymes (tels que l'IDFA d'Apple ou l'identifiant publicitaire Google) conformément aux exigences des plateformes (comme le cadre ATT d'Apple).</p>
+
+        <h2>4. Protection des Enfants</h2>
+        <p>Unstoppable Dursun ne collecte sciemment aucune donnée personnelle auprès d'enfants de moins de 13 ans. Si vous pensez qu'un enfant nous a fourni des données personnelles, veuillez nous contacter afin que nous les supprimions.</p>
+
+        <h2>5. Sécurité</h2>
+        <p>Nous accordons une grande importance à votre confiance. Puisque nous n'exploitons aucune base de données de comptes distants, vos données personnelles ne sont pas exposées à des risques de piratage via notre application.</p>
+
+        <h2>6. Modifications de cette Politique</h2>
+        <p>Nous pouvons mettre à jour cette politique périodiquement pour refléter l'évolution de nos fonctionnalités ou des exigences réglementaires.</p>
+
+        <h2>7. Nous Contacter</h2>
+        <p>Pour toute question ou suggestion concernant notre politique de confidentialité :</p>
+        <ul>
+            <li><strong>Entreprise :</strong> Mainstone Interactive</li>
+            <li><strong>Site Web :</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
+            <li><strong>E-mail :</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
+        </ul>
+    </div>
+
+    <!-- 6. ITALIAN -->
+    <div id="lang-it" class="lang-content">
+        <h2>Informativa sulla Privacy</h2>
+        <p><strong>Data di entrata in vigore:</strong> 19 ottobre 2026</p>
+        <p>La presente Informativa sulla Privacy si applica al gioco <strong>Unstoppable Dursun</strong> (noto anche come <em>Durdurulamaz Dursun</em> / <em>Stopman</em>), sviluppato e pubblicato da <strong>Mainstone Interactive</strong>.</p>
+
+        <h2>1. Informazioni che non raccogliamo</h2>
+        <p>Rispettiamo la vostra privacy. Unstoppable Dursun non richiede alcuna registrazione, account o credenziale di accesso. Non raccogliamo, memorizziamo né elaboriamo dati personali sensibili quali nome, indirizzo e-mail, indirizzo fisico, numero di telefono o dati biometrici.</p>
+
+        <h2>2. Rete Locale (LAN) e Dati Multiplayer</h2>
+        <p>Il nostro gioco include funzionalità multigiocatore sullo stesso schermo, online e su rete locale (LAN):</p>
+        <ul>
+            <li><strong>Rete Locale (LAN) e Multicast:</strong> L'applicazione impiega il protocollo locale UDP Multicast su Wi-Fi per rilevare le stanze di gioco aperte sulla medesima subnet. Questi pacchetti di scoperta rimangono confinati nella vostra rete locale privata e non vengono inviati ai nostri server.</li>
+            <li><strong>Multiplayer Online:</strong> Le informazioni di connessione peer-to-peer vengono utilizzate unicamente per la sincronizzazione della partita in corso e non per tracciare l'identità dell'utente.</li>
+        </ul>
+
+        <h2>3. Pubblicità e Servizi di Terze Parti</h2>
+        <p>Il gioco può integrare servizi terzi affidabili, come <strong>Google AdMob</strong>, per l'erogazione di annunci pubblicitari. Tali fornitori possono trattare identificatori anonimi del dispositivo (quali IDFA di Apple o Google Advertising ID) in conformità con le linee guida delle piattaforme (ad esempio il framework ATT di Apple).</p>
+
+        <h2>4. Privacy dei Minori</h2>
+        <p>Unstoppable Dursun non raccoglie consapevolmente informazioni identificabili di minori di 13 anni. Nel caso in cui si ritenga che un minore abbia fornito dati personali, vi invitiamo a contattarci prontamente per la rimozione.</p>
+
+        <h2>5. Sicurezza</h2>
+        <p>Teniamo alla vostra fiducia. Poiché non archiviamo account utente o database remoti, i vostri dati personali non sono esposti a violazioni esterne attraverso la nostra applicazione.</p>
+
+        <h2>6. Modifiche alla presente Informativa</h2>
+        <p>Ci riserviamo il diritto di aggiornare periodicamente la presente Informativa per adeguarla a nuove funzionalità o requisiti normativi degli store.</p>
+
+        <h2>7. Contattaci</h2>
+        <p>Per domande o chiarimenti relativi a questa Informativa sulla Privacy:</p>
+        <ul>
+            <li><strong>Azienda:</strong> Mainstone Interactive</li>
+            <li><strong>Sito Web:</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
+            <li><strong>E-mail:</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
+        </ul>
+    </div>
+
+    <!-- 7. POLISH -->
+    <div id="lang-pl" class="lang-content">
+        <h2>Polityka Prywatności</h2>
+        <p><strong>Data wejścia w życie:</strong> 19 października 2026 r.</p>
+        <p>Niniejsza Polityka Prywatności dotyczy gry <strong>Unstoppable Dursun</strong> (znanej również jako <em>Durdurulamaz Dursun</em> / <em>Stopman</em>), stworzonej i wydanej przez <strong>Mainstone Interactive</strong>.</p>
+
+        <h2>1. Informacje, których nie zbieramy</h2>
+        <p>Szanujemy Twoją prywatność. Unstoppable Dursun nie wymaga rejestracji, tworzenia konta ani logowania. Nie gromadzimy, nie przetwarzamy ani nie przechowujemy poufnych danych osobowych, takich jak imię i nazwisko, adres e-mail, adres zamieszkania, numer telefonu czy dane biometryczne.</p>
+
+        <h2>2. Sieć Lokalna (LAN) i Dane Trybu Wieloosobowego</h2>
+        <p>Nasza gra oferuje tryb wieloosobowy na jednym ekranie, przez Internet oraz w Sieci Lokalnej (LAN):</p>
+        <ul>
+            <li><strong>Sieć Lokalna (LAN) i Multicast:</strong> Gra wykorzystuje lokalny protokół UDP Multicast w sieci Wi-Fi do wyszukiwania aktywnych sesji w tej samej podsieci. Pakiety te pozostają wyłącznie w Twojej prywatnej sieci domowej i nie są przesyłane na nasze serwery zewnętrzne.</li>
+            <li><strong>Multiplayer Online:</strong> Dane połączeń sieciowych służą wyłącznie do bieżącej synchronizacji aktywnej rozgrywki i nigdy nie są używane do śledzenia tożsamości użytkownika.</li>
+        </ul>
+
+        <h2>3. Usługi Zewnętrzne i Reklamy</h2>
+        <p>Gra może integrować zaufane usługi podmiotów trzecich, takie jak <strong>Google AdMob</strong>, w celu wyświetlania reklam. Usługodawcy ci mogą przetwarzać anonimowe identyfikatory urządzeń (np. Apple IDFA lub Google Advertising ID) w pełnej zgodności z zasadami prywatności platform (m.in. Apple App Tracking Transparency).</p>
+
+        <h2>4. Prywatność Dzieci</h2>
+        <p>Unstoppable Dursun świadomie nie gromadzi żadnych danych osobowych od dzieci poniżej 13 roku życia. W przypadku podejrzenia, że dziecko przekazało nam takie dane, prosimy o kontakt w celu ich natychmiastowego usunięcia.</p>
+
+        <h2>5. Bezpieczeństwo</h2>
+        <p>Dbamy o Twoje zaufanie. Ponieważ nie prowadzimy zdalnych baz danych użytkowników, Twoje dane osobowe nie są narażone na wycieki z serwerów za pośrednictwem naszej gry.</p>
+
+        <h2>6. Zmiany w Polityce Prywatności</h2>
+        <p>Zastrzegamy sobie prawo do okresowej aktualizacji niniejszej Polityki Prywatności w związku z rozwojem gry lub zmianami regulacyjnymi platform.</p>
+
+        <h2>7. Kontakt</h2>
+        <p>W przypadku pytań lub uwag dotyczących niniejszej Polityki Prywatności, prosimy o kontakt:</p>
+        <ul>
+            <li><strong>Firma:</strong> Mainstone Interactive</li>
+            <li><strong>Strona WWW:</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
+            <li><strong>E-mail:</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
+        </ul>
+    </div>
+
+    <!-- 8. PORTUGUESE -->
+    <div id="lang-pt" class="lang-content">
+        <h2>Política de Privacidade</h2>
+        <p><strong>Data de vigência:</strong> 19 de outubro de 2026</p>
+        <p>Esta Política de Privacidade aplica-se ao jogo <strong>Unstoppable Dursun</strong> (também conhecido como <em>Durdurulamaz Dursun</em> / <em>Stopman</em>), desenvolvido e publicado por <strong>Mainstone Interactive</strong>.</p>
+
+        <h2>1. Informações que não coletamos</h2>
+        <p>Respeitamos a sua privacidade. O Unstoppable Dursun não requer criação de conta, registro ou login. Não coletamos, armazenamos ou processamos dados pessoais confidenciais, como seu nome, e-mail, endereço residencial, telefone ou dados biométricos.</p>
+
+        <h2>2. Rede Local (LAN) e Dados Multijogador</h2>
+        <p>Nosso jogo oferece modos multijogador na mesma tela, online e em Rede Local (LAN):</p>
+        <ul>
+            <li><strong>Rede Local (LAN) e Multicast:</strong> O aplicativo usa o protocolo UDP Multicast em sua rede Wi-Fi para descobrir partidas criadas na mesma sub-rede. Esses pacotes permanecem exclusivamente dentro da sua rede local privada e não são enviados a servidores externos.</li>
+            <li><strong>Multijogador Online:</strong> As conexões peer-to-peer são processadas unicamente para a sincronização da partida ativa e nunca para rastrear sua identidade pessoal.</li>
+        </ul>
+
+        <h2>3. Publicidade e Serviços de Terceiros</h2>
+        <p>O jogo pode integrar serviços confiáveis de terceiros, como o <strong>Google AdMob</strong>, para veiculação de anúncios. Esses provedores podem processar identificadores de dispositivos anônimos (como o Apple IDFA ou o Google Advertising ID) em total conformidade com as regras das plataformas (como a estrutura ATT da Apple).</p>
+
+        <h2>4. Privacidade de Crianças</h2>
+        <p>O Unstoppable Dursun não coleta intencionalmente dados pessoais de crianças menores de 13 anos. Caso acredite que uma criança nos forneceu dados pessoais, entre em contato conosco para que possamos removê-los imediatamente.</p>
+
+        <h2>5. Segurança</h2>
+        <p>Valorizamos sua confiança. Como não mantemos bancos de dados remotos de contas de usuários, seus dados pessoais não estão expostos a violações de servidores através do nosso aplicativo.</p>
+
+        <h2>6. Alterações nesta Política</h2>
+        <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir novas funcionalidades do jogo ou exigências das lojas de aplicativos.</p>
+
+        <h2>7. Fale Conosco</h2>
+        <p>Para dúvidas ou sugestões sobre esta Política de Privacidade, entre em contato:</p>
+        <ul>
+            <li><strong>Empresa:</strong> Mainstone Interactive</li>
+            <li><strong>Website:</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
+            <li><strong>E-mail:</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
+        </ul>
+    </div>
+
+    <!-- 9. RUSSIAN -->
+    <div id="lang-ru" class="lang-content">
+        <h2>Политика конфиденциальности</h2>
+        <p><strong>Дата вступления в силу:</strong> 19 октября 2026 г.</p>
+        <p>Настоящая Политика конфиденциальности распространяется на игру <strong>Unstoppable Dursun</strong> (также известную как <em>Durdurulamaz Dursun</em> / <em>Stopman</em>), разработанную и опубликованную компанией <strong>Mainstone Interactive</strong>.</p>
+
+        <h2>1. Данные, которые мы не собираем</h2>
+        <p>Мы уважаем вашу конфиденциальность. Unstoppable Dursun не требует регистрации или создания учетной записи. Мы не собираем, не обрабатываем и не храним конфиденциальные персональные данные, такие как ваше имя, адрес электронной почты, домашний адрес, номер телефона или биометрические данные.</p>
+
+        <h2>2. Локальная сеть (LAN) и Мультиплеер</h2>
+        <p>Наша игра включает локальный мультиплеер на одном экране, сетевой онлайн-режим и игру по локальной сети (LAN):</p>
+        <ul>
+            <li><strong>Локальная сеть (LAN) и Multicast:</strong> Игра использует протокол UDP Multicast в локальной сети Wi-Fi для обнаружения матчей в пределах одной подсети. Эти сетевые пакеты циркулируют исключительно внутри вашей частной домашней сети и никогда не передаются на внешние серверы.</li>
+            <li><strong>Онлайн Мультиплеер:</strong> Сетевые соединения служат исключительно для синхронизации текущего игрового процесса и не используются для отслеживания личности игрока.</li>
+        </ul>
+
+        <h2>3. Сторонние сервисы и Реклама</h2>
+        <p>Игра может использовать сторонние сервисы, такие как <strong>Google AdMob</strong>, для показа рекламы. Данные провайдеры могут обрабатывать анонимные идентификаторы устройств (например, Apple IDFA или Google Advertising ID) в строгом соответствии с политиками платформ (включая систему Apple App Tracking Transparency).</p>
+
+        <h2>4. Конфиденциальность детей</h2>
+        <p>Игра Unstoppable Dursun сознательно не собирает личную информацию от детей в возрасте до 13 лет. Если вы считаете, что ребенок передал нам личные данные, свяжитесь с нами для их немедленного удаления.</p>
+
+        <h2>5. Безопасность</h2>
+        <p>Мы ценим ваше доверие. Поскольку мы не храним учетные записи игроков на удаленных серверах, ваши личные данные не подвержены риску утечек через наше приложение.</p>
+
+        <h2>6. Изменения в Политике конфиденциальности</h2>
+        <p>Мы можем периодически обновлять данную Политику конфиденциальности по мере добавления новых функций или обновления требований платформ.</p>
+
+        <h2>7. Связаться с нами</h2>
+        <p>По любым вопросам или предложениям относительно данной политики конфиденциальности вы можете связаться с нами:</p>
+        <ul>
+            <li><strong>Компания:</strong> Mainstone Interactive</li>
+            <li><strong>Веб-сайт:</strong> <a href="https://mainstone.com.tr">https://mainstone.com.tr</a></li>
+            <li><strong>Электронная почта:</strong> <a href="mailto:ali@mainstone.com.tr">ali@mainstone.com.tr</a></li>
+        </ul>
+    </div>
 
     <div class="footer">
         <p>&copy; 2026 Mainstone Interactive. All rights reserved.</p>
     </div>
+</div>
+
+<script>
+    const supportedLangs = ['en', 'tr', 'de', 'es', 'fr', 'it', 'pl', 'pt', 'ru'];
+
+    function changeLanguage(lang) {
+        if (!supportedLangs.includes(lang)) lang = 'en';
+        document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+        const target = document.getElementById('lang-' + lang);
+        if (target) target.classList.add('active');
+        document.getElementById('langSelect').value = lang;
+    }
+
+    (function init() {
+        const userLang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+        if (supportedLangs.includes(userLang)) {
+            changeLanguage(userLang);
+        }
+    })();
+</script>
 
 </body>
 </html>
